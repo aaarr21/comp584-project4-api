@@ -1,6 +1,6 @@
 // Function to fetch and display NPS data
 async function getParkData() {
-    const apiKey = 'YOUR_API_KEY'; // Replace with your actual API key
+    const apiKey = config.API_KEY;
     const parkCode = 'jotr'; // Joshua Tree National Park
     const url = `https://developer.nps.gov/api/v1/parks?parkCode=${parkCode}&api_key=${apiKey}`;
 
@@ -13,7 +13,7 @@ async function getParkData() {
         const park = data.data[0];
 
         const container = document.getElementById('nps-data');
-        
+
         // Create HTML content
         const html = `
             <h3>${park.fullName}</h3>
@@ -23,7 +23,7 @@ async function getParkData() {
                 <a href="${park.url}" target="_blank" class="btn">Visit Official Site</a>
             </div>
         `;
-        
+
         container.innerHTML = html;
 
     } catch (error) {
