@@ -1,0 +1,97 @@
+/* Border box declaration 
+https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+html {
+	box-sizing: border-box;
+}
+
+/* inherit border-box on all elements in the universe and before and after
+ */
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: Arial, Geneva, sans-serif;
+}
+
+a {
+	color: #2772B0;
+}
+
+.wrapper {
+	width: 97%;
+	max-width: 1200px;
+	margin: 0 auto;
+	float: none;
+	background-color: #fff;
+}
+
+div img {
+	width: 100%;
+	max-width: 225px;
+}
+
+/* grid system -- simplified */
+
+.row {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+	padding: 2rem 0;
+}
+
+/* Card styling */
+article {
+	background-color: #f9f9f9;
+	padding: 1.5rem;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	transition: transform 0.2s ease;
+}
+
+article:hover {
+	transform: translateY(-5px);
+}
+
+article h3 {
+	margin-top: 0;
+	color: #333;
+}
+
+article p {
+	color: #666;
+	line-height: 1.6;
+}
+
+/* Remove old specific column classes */
+
+
+/* We can remove the specific col-1, col-2 etc background colors and spans as we want a clean uniform look */
+/* If we want to keep some variety we could, but "simple, clean" suggests uniformity */
+
+/* Reset legacy specific column styles */
+.col-1,
+.col-2,
+.col-3,
+.col-4 {
+	background-color: transparent;
+	grid-column: auto;
+}
+
+/* Button Styling */
+.btn {
+	display: inline-block;
+	background-color: #2772B0;
+	color: #fff;
+	padding: 0.5rem 1rem;
+	text-decoration: none;
+	border-radius: 4px;
+	margin-top: 1rem;
+	transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+	background-color: #1a5c90;
+}
