@@ -142,7 +142,9 @@ article p {
 	background-color: #1a5c90;
 	transform: translateY(-2px);
 	box-shadow: 0 6px 12px rgba(39, 114, 176, 0.3);
+
 }
+
 
 /* API Data Section */
 #nps-data {
