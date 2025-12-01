@@ -11,13 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const { keyframes } = window.popmotion;
   console.log('Popmotion available, keyframes:', typeof keyframes === 'function');
 
-  // Info box
-  const info = document.createElement('div');
-  info.id = 'animation-info';
-  info.style.cssText = 'position:fixed;right:16px;top:16px;background:#fff;padding:10px;border-radius:6px;box-shadow:0 6px 18px rgba(0,0,0,0.12);font-family:inherit;z-index:9999;max-width:220px;font-size:14px;color:#222;';
-  info.innerHTML = '<strong>Popmotion Function</strong><br><code>keyframes()</code>';
-  document.body.appendChild(info);
-
   const cards = Array.from(document.querySelectorAll('article'));
   console.log('Found article elements:', cards.length);
   if (!cards.length) return;
